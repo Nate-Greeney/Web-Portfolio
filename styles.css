@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(255, 255, 255);
+    padding: 40px;
+    margin: 0;
+    text-align: center;
+}
+#Introduction{
+    font-size: small;
+    color: rgb(17, 0, 255);
+    padding: 40px;
+}
+#experience{
+    font-size: small;
+    color: rgb(158, 46, 161);
+    padding: 40px;
+}
+#Future{
+    font-size: small;
+    color: rgb(102, 0, 204);
+    padding: 40px;
+}
+h1 {
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #666;
+}
+header{
+    margin-top: 40px;
+    font-size: 14px;
+    color: #666;
+}
