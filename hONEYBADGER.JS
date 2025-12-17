@@ -1,17 +1,15 @@
-// Import Honeybadger browser library
-import Honeybadger from 'https://cdn.jsdelivr.net/npm/@honeybadger-io/js@6/dist/browser/honeybadger.min.js'
+import React from "react"
+import ReactDOM from "react-dom"
 
-// Configure Honeybadger
-const honeybadger = Honeybadger.configure({
+import "./index.css"
+import App from "./App"
+import { Honeybadger, HoneybadgerErrorBoundary } from "@honeybadger-io/react"
+
+const config = {
   apiKey: "hbp_7omdIoGUP6BGDMg5T4ZFXl39wEYGa04e6GEw",
   environment: "production"
-})
+}
 
-// Make it globally accessible
-window.honeybadger = honeybadger
+const honeybadger = Honeybadger.configure(config)
 
-// Test notification
-honeybadger.notify("Testing Honeybadger from browser!")
-
-console.log("Honeybadger initialized successfully")
-
+ReactDOM.render(<HoneybadgerErrorBoundary honeybadger={honeybadger}><App /></HoneybadgerErrorBoundary>, document.getElementById("root"))
