@@ -1,25 +1,35 @@
-import React from "react"
-import ReactDOM from "react-dom"
-
-import "./index.css"
-import App from "./App"
-import { Honeybadger, HoneybadgerErrorBoundary } from "@honeybadger-io/react"
-
-const config = {
+// Honeybadger Configuration
+const HoneybadgerConfig = {
   apiKey: "hbp_7omdIoGUP6BGDMg5T4ZFXl39wEYGa04e6GEw",
   environment: "production"
 }
 
-const honeybadger = Honeybadger.configure(config)
+// Initialize Honeybadger
+window.honeybadger = {
+  notify: function(message, options = {}) {
+    const payload = {
+      error: {
+        message: message,
+        ...options
+      }
+    }
+    
+    // Send to Honeybadger API
+    fetch("https://api.honeybadger.io/v1/notices", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        api_key: HoneybadgerConfig.apiKey,
+        notice: payload
+      })
+    }).catch(err => console.error("Honeybadger error:", err))
+    
+    console.log("Honeybadger notification sent:", message)
+  }
+}
 
-export default honeybadger
-
-ReactDOM.render(
-  <HoneybadgerErrorBoundary honeybadger={honeybadger}>
-    <App />
-  </HoneybadgerErrorBoundary>,
-  document.getElementById("root")
-)
-
-honeybadger.notify("Testing Honeybadger!")
+// Test notification
+window.honeybadger.notify("Testing Honeybadger!")
 
