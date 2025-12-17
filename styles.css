@@ -21,8 +21,13 @@ body {
     padding: 40px;
 }
 h1 {
-    color: rgb(255, 0, 0);
+    color: rgb(68, 14, 70);
     font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
+h2 {
+    color: rgb(44, 27, 44);
+    font-size: 30px;
     font-family: 'Courier New', Courier, monospace;
 }
 
