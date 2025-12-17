@@ -1,10 +1,3 @@
-# npm
-npm add @honeybadger-io/js @honeybadger-io/react --save
-
-# yarn
-yarn add @honeybadger-io/js @honeybadger-io/react
-
-
 import React from "react"
 import ReactDOM from "react-dom"
 
