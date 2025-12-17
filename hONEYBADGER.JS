@@ -1,5 +1,5 @@
 // Import Honeybadger browser library
-import Honeybadger from 'https://cdn.jsdelivr.net/npm/@honeybadger-io/js@latest/dist/browser/honeybadger.esm.min.js'
+import Honeybadger from 'https://cdn.jsdelivr.net/npm/@honeybadger-io/js@6/dist/browser/honeybadger.min.js'
 
 // Configure Honeybadger
 const honeybadger = Honeybadger.configure({
