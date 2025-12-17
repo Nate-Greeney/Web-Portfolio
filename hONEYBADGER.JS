@@ -11,7 +11,15 @@ const config = {
 }
 
 const honeybadger = Honeybadger.configure(config)
-Honeybadger.notify("Testing Honeybadger!");
 
-ReactDOM.render(<HoneybadgerErrorBoundary honeybadger={honeybadger}><App /></HoneybadgerErrorBoundary>, document.getElementById("root"))
+export default honeybadger
+
+ReactDOM.render(
+  <HoneybadgerErrorBoundary honeybadger={honeybadger}>
+    <App />
+  </HoneybadgerErrorBoundary>,
+  document.getElementById("root")
+)
+
+honeybadger.notify("Testing Honeybadger!")
 
