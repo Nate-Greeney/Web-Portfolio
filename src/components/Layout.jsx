@@ -16,7 +16,7 @@ export default function Layout() {
       <Outlet />
 
       <footer style={{ marginTop: 24 }}>
-        Any inquirys, contact me at nathan07green@gmail.com or on Discord
+        Any inquiries, contact me at nathan07green@gmail.com or on Discord
       </footer>
     </div>
   )

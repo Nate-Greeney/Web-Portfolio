@@ -5,17 +5,19 @@ export default function About() {
     <div>
       <h2>About Me</h2>
       <ul>
-        <li>Hobbys:</li>
+        <li>Hobbies:</li>
         <li>Coding</li>
         <li>Gaming</li>
         <li>Content Creation</li>
-        <ol>
-          favorite games in order:
-          <li>FiveM</li>
-          <li>Rust</li>
-          <li>Minecraft</li>
-          <li>Space Engineers</li>
-        </ol>
+        <li>
+          Favorite games in order:
+          <ol>
+            <li>FiveM</li>
+            <li>Rust</li>
+            <li>Minecraft</li>
+            <li>Space Engineers</li>
+          </ol>
+        </li>
       </ul>
     </div>
   )
